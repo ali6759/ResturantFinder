@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/fast_food_bot"
+        android:title="@string/fast_food"
+        android:icon="@drawable/ic_restaurant_menu_black_24dp"/>
+    <item
+        android:id="@+id/restaurant_menu"
+        android:title="@string/restaurant"
+        android:icon="@drawable/ic_restaurant_black_24dp"/>
+    <item
+        android:id="@+id/setting_menu"
+        android:title="@string/setting"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+</menu>

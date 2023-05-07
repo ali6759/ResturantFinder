@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fastlist.FastFood1"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_res"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/five_guys1"
+            android:scaleType="centerCrop"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/_4_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/_4_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_rate_review_black_24dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="2">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:background="@drawable/bac_info">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.20" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant_name"
+                app:layout_constraintTop_toBottomOf="@id/chart_g1"
+                app:layout_constraintStart_toEndOf="@id/chart_g5"
+                app:layout_constraintEnd_toStartOf="@id/chart_g3"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/alice_blue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tel"
+                app:layout_constraintTop_toBottomOf="@id/chart_g7"
+                app:layout_constraintStart_toEndOf="@id/chart_g5"
+                app:layout_constraintEnd_toStartOf="@id/chart_g3"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                app:layout_constraintTop_toBottomOf="@id/chart_g9"
+                app:layout_constraintStart_toEndOf="@id/chart_g5"
+                app:layout_constraintEnd_toStartOf="@id/chart_g3"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/site"
+                app:layout_constraintTop_toBottomOf="@id/chart_g11"
+                app:layout_constraintStart_toEndOf="@id/chart_g5"
+                app:layout_constraintEnd_toStartOf="@id/chart_g3"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_your_rate"
+                app:layout_constraintTop_toBottomOf="@id/chart_g13"
+                app:layout_constraintStart_toEndOf="@id/chart_g5"
+                app:layout_constraintEnd_toStartOf="@id/chart_g3"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/environment"
+                app:layout_constraintTop_toBottomOf="@id/chart_g15"
+                app:layout_constraintStart_toEndOf="@id/chart_g5"
+                app:layout_constraintEnd_toStartOf="@id/chart_g3"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.20" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chart_g16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75" />
+            <TextView
+                android:id="@+id/txt_res_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/chart_g2"
+                app:layout_constraintEnd_toStartOf="@id/chart_g4"
+                app:layout_constraintStart_toEndOf="@id/chart_g6"
+                android:gravity="center"
+                android:text="@string/five_guys"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txt_res_tel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_4502380378"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/chart_g4"
+                app:layout_constraintStart_toEndOf="@id/chart_g6"
+                app:layout_constraintTop_toTopOf="@+id/chart_g8" />
+
+            <TextView
+                android:id="@+id/txt_res_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_600_rue_lucien_paiement_suite_120_laval_quebec_h7n_0a5"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/chart_g12"
+                app:layout_constraintEnd_toStartOf="@id/chart_g4"
+                app:layout_constraintStart_toEndOf="@id/chart_g6"
+                app:layout_constraintTop_toTopOf="@+id/chart_g10" />
+
+
+
+            <TextView
+                android:id="@+id/open_web"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/open_in_browser"
+                app:layout_constraintTop_toBottomOf="@id/chart_g12"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/chart_g4"
+                app:layout_constraintStart_toStartOf="@+id/chart_g6"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/rate_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/chart_g14"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/chart_g4"
+                app:layout_constraintStart_toStartOf="@+id/chart_g6"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/chart_g16"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/chart_g4"
+                app:layout_constraintStart_toStartOf="@+id/chart_g6"
+                android:text="@string/family_romantic"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <!--    </ScrollView>-->
+
+</LinearLayout>
